@@ -1,0 +1,37 @@
+* {
+	font-family : Arial , Sans Serif;
+}
+h2 {
+	width :  100% ;
+	text-align : center;
+	text-transform : uppercase;
+}
+.image-container , .api-container {
+	display : block;
+	width :  100% ;
+	text-align : center;
+}
+.image-content , .api-content {
+	display : inline;
+}
+.image , .image  img , .image  select {
+	display : inline-block;
+	width :  250 px ;
+}
+button {
+	margin :  10 px  0 px ;
+	width :  500 px ;
+}
+pre {
+	width :  500 px ;
+	min-height :  80 px ;
+	margin :  0 auto;
+	padding :  15 px ;
+	text-align : left;
+	border :  1 px solid gray;
+	box-sizing : border-box;
+}
+#github {
+	margin :  20 px ;
+	width :  40 px ;
+}

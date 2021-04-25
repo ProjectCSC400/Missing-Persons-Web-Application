@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title>Finding Missing People</title>
+          {{>header}}
+
+
+		<script 
+       		 src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"> 
+    		</script>
+
+			    <link rel = "stylesheet" href="css/index.css">
+
+
+		 {{!-- <script type="text/javascript">
+       		 $(document).ready(function(){
+            		faceapi();
+       		 })
+        
+        		function faceapi(){
+            		var SendInfo= { faceId: '43a4de00-e750-4bb8-8379-de3b33c9c0a6',personId:'2c0f2289-68cc-4cf6-ab12-9c0eec6bf3c7',largePersonGroupId:'112233'};
+            			$.ajax({
+                type: 'POST',
+                url: 'https://yoursourcename.cognitiveservices.azure.com/face/v1.0/verify',
+                dataType: 'json',
+                data: JSON.stringify(SendInfo),
+                beforeSend: function(request) {
+                    request.setRequestHeader("Content-Type", 'application/json');
+                    request.setRequestHeader("Ocp-Apim-Subscription-Key", 'yourkey');
+
+                },
+                success: function(res){
+                    console.log(res)
+                }
+            });
+        }
+        </script> --}}
+
+
+     </head>
+
+<body>
+     <header>
+     {{>navbar1}}
+     </header>
+
+
+<h2> Face Matching Test </h2>
+	<div class = " image-container ">
+		<div  class = " image-content " >
+			<div  class = " image " >
+				<img  id = " face_a " >
+				Upload a Face url:<input type="file" name="file">
+				<input type="submit" value="Upload" onclick="face_a()">
+			
+
+			</div >
+			<div  class = " image " >
+				<img  id = " face_b " >
+				<select  id = " select_b " onchange = " select (this, value) " >
+				</select >
+
+
+			</div >
+		</div >
+	</div >
+	<div  class = " api-container " >
+		<div  class = " api-content " >
+			<button  onclick = " match () " > Match </button >
+			<span  id = " loading " > Loading ... </span >
+			<pre  id = " response " > </pre >
+			
+		</div >
+	</div >
+	<script type = "text/javascript" src = "js/index.js"> </script>
+
+
+
+
+</body>
+</html> 

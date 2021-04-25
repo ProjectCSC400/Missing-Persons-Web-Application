@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title>Finding Missing People</title>
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+          
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<style>
+     
+.col-md-3 {
+     float: left;
+     width: 75%;
+     margin-top: 1px;
+}
+header{
+     background-color: rgba(136, 16, 248, 0.867);
+}
+section {
+     margin: 0px;
+     padding-top: 61px;
+}
+h2 {
+     padding-left: 28px;
+}
+
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+.full-page{
+     height: 100%;
+     width: 100%;
+     
+     background-position: center;
+     background-size: cover;
+     position: absolute;
+}
+.navbar{
+     display: flex;
+     align-items: center;
+     padding: 20px;
+     padding-left: 50px;
+     padding-right: 30px;
+     padding-top: 50px;
+}
+nav{
+     flex: 1;
+     text-align: right;
+}
+nav ul{
+     display:inline-block;
+     list-style: none;
+}
+nav ul li{
+     display:inline-block;
+     margin-right: 70px;
+}
+nav ul li a{
+     text-decoration: none;
+     font-size: 20px;
+     color: rgba(247, 241, 241, 0.993);
+     font-family: sans-serif;
+}
+nav ul li button {
+     cursor: pointer;
+}
+
+</style>
+     </head>
+
+<body>
+     <header>
+     {{>navbar1}}
+     </header>
+
+     <section>
+          
+               <div class="col-md-12">
+                    <h2>Filter Search</h2>
+                    <form action="/filter/" id="MissingForm" class="form-horizontal" method="post">
+                         <div class="col-md-3">
+                         <div class="form-group">
+                              <label for="firstname" class="col-md-12 control-label"><b>By FirstName</b></label>
+                              <div class="col-md-12">
+                                   <input type="text" class="form-control" name="fltrfirstname" placeholder="FirstName">
+                              </div>
+                         </div>
+               </div>
+               
+               <div class="col-md-3">
+                    <div class="form-group">
+                         <label for="lastname" class="col-md-12 control-label"><b>By LastName</b></label>
+                         <div class="col-md-12">
+                              <input type="text" class="form-control" name="fltrlastname" placeholder="Last Name">
+                         </div>
+                    </div>
+               </div>
+               
+               <div class="col-md-3">
+                    <div class="form-group">
+                         <label for="age" class="col-md-12 control-label"><b>By Age</b></label>
+                         <div class="col-md-12">
+                              <input type="text" class="form-control" name="fltrage" placeholder="Enter Age">
+                         </div>
+                    </div>
+               </div>
+
+               <div class="col-md-3">
+                    <div class="form-group">
+                         <label for="empty" class="col-md-12 control-label">&nbsp;</label>
+                         <div class="col-md-12">
+                              <input type="submit" class="form-control btn btn-primary" name="submit" placeholder="Filter">
+                         </div>
+                    </div>
+               </div>
+
+                    </form>
+               </div><br><br><br>
+
+
+          <div class="ab">
+               
+               <h1>{{title }}</h1><br>
+          <div>
+               <table class="table table-striped table-primary">
+                    <thead>
+                         <tr>
+                              <th>FirstName</th>
+                              <th>LastName</th>
+                              <th>Gender</th>
+                              <th>Age</th>
+                              <th>Height</th>
+                              <th>Weight</th>
+                              <th>State</th>
+                              <th>LastSeen</th>
+                              <th>Action</th>
+                         </tr>
+                    </thead>
+                    <tbody>
+                     {{#each records}}
+                    <tr>
+                         <td>{{this.firstname}}</td>
+                         <td>{{this.lastname}}</td>
+                         <td>{{this.gender}}</td>
+                         <td>{{this.age}}</td>
+                         <td>{{this.height}}</td>
+                         <td>{{this.weight}}</td>
+                         <td>{{this.state}}</td>
+                         <td>{{this.lastseen}}</td>
+                         <td>
+                              <a class="btn btn-primary btn-sm" href="/edit/{{this.id}}"><i class="fa fa-edit"></i>
+</a>
+                              <a class="btn btn-danger btn-sm" href="/delete/{{this.id}}" 
+                              onclick="return confirm('Are you sure you want to delete this record?');"><i class="fa fa-trash"></i>
+</a>
+                         </td>
+                        
+                    </tr>
+                    {{/each}}
+                    </tbody>
+
+               </table>
+          </div>
+     </section>
+
+</body>
+</html> 

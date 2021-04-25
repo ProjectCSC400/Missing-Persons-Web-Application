@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <title>Finding Missing People</title>
+          {{>header}}
+     </head>
+
+<body>
+     {{>navbar}}
+     
+<div class="bg-img">
+     <div class="content">
+          <header> Login form </header>
+          <form action="/login" method="POST">
+               <div class="field">
+                    <span class='fa fa-user'></span>
+                    <input type="text" placeholder="Email" required name="email">
+               </div>
+
+               <div class="field space">
+                    <span class="fa fa-lock"></span>
+                    <input type="password" class="password" placeholder="password" required name="password">
+                    <span class="show">SHOW</span>
+               </div>
+
+               <div class="field space">
+                    <input type="submit" value="Sign In">
+               </div>
+
+               <div class="alt">
+               <h5>Don't have account? <a href="/register"> Signup here </a> </h5>
+               </div>
+          </form>
+     </div>
+</div>
+
+
+</body>
+
+</html>
+

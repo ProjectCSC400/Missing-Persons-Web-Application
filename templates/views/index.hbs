@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <title>Finding Missing People</title>
+          {{!-- {{>header}} --}}
+          <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+     </head>
+
+           <link rel = "stylesheet" href="css/search.css">
+<body class="bg-img">
+
+     {{>navbar}}<br><br><br><br><br><br><br><br><br><br><br><br>
+
+     <div class="container">
+
+          
+
+     <div class="content">
+     <table class="">
+          <h2 style="text-align: center; text-transform:uppercase; color:darkseagreen">Missing Person Records</h2>
+          <tr>
+               <td>
+               <form action="/search/" id="MissingForm" class="form-horizontal" method="post">
+                    <div class="col-md-3">
+                         <div class="form-group">
+                              <label for="firstname" class="col-1 control-label"><b>By FirstName</b></label>
+                              <div class="col-1">
+                                   <input type="text" class="form-control" name="fltrfirstname" placeholder="FirstName">
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3">
+                         <div class="form-group">
+                              <label for="lastname" class="col-2 control-label"><b>By LastName</b></label>
+                               <div class="col-2">
+                              <input type="text" class="form-control" name="fltrlastname" placeholder="Last Name">
+                               </div>
+                          </div>
+                     </div>
+               
+                    <div class="col-md-3">
+                         <div class="form-group">
+                              <label for="age" class="col-3 control-label"><b>By Age</b></label>
+                              <div class="col-3">
+                              <input type="text" class="form-control" name="fltrage" placeholder="Enter Age">
+                               </div>
+                         </div>
+                     </div>
+
+                    <div class="col-md-3">
+                         <div class="form-group">
+                              <label for="empty" class="col-4 control-label">&nbsp;</label>
+                              <div class="col-4">
+                              <button type="submit">Search <i class="fa fa-search"></i></button>
+                              {{!-- <input type="search" class="form-control btn btn-primary" name="submit" placeholder="Filter"> --}}
+                              </div>
+                         </div>
+                    </div>
+               </form>
+               </td>
+
+               <td>
+                    <div>
+               
+               <table class="table table-striped table-primary">
+                    <thead>
+                         <tr>
+                              <th>FirstName</th>
+                              <th>LastName</th>
+                              <th>Gender</th>
+                              <th>Age</th>
+                              <th>Eye Color</th>
+                              <th>Haircolor</th>
+                              <th>State</th>
+                              <th>Reported By</th>
+                              <th>Lost/Found</th
+                         </tr>
+                    </thead>
+                    <tbody>
+                     {{#each records}}
+                    <tr>
+                         <td>{{this.firstname}}</td>
+                         <td>{{this.lastname}}</td>
+                         <td>{{this.gender}}</td>
+                         <td>{{this.age}}</td>
+                         <td>{{this.eyecolor}}</td>
+                         <td>{{this.haircolor}}</td>
+                         <td>{{this.state}}</td>
+                         <td>{{this.reportername}}</td>
+                         <td>{{this.status}}</td>
+                                                 
+                    </tr>
+                    {{/each}}
+                    </tbody>
+
+               </table>
+          </div>
+               </td>
+          </tr>
+     </table>
+     </div>
+     </div>
+
+</body>
+
+</html>

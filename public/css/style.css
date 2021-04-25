@@ -1,0 +1,120 @@
+
+.w-b{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+
+.bg-img{
+     background-image: url('missing.jpg');     
+     height: 100vh;
+     background-size: cover;
+     background-position: center;
+}
+.bg-img:after{
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 100%;
+     width: 100%;
+     background: rgba(0,0,0,0.7);
+}
+.content{
+     position: absolute;
+     top: 60%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+     z-index: 999;
+     width: 270px;
+     text-align: center;
+     padding: 60px 32px;
+     background: rgba(255,255,255,0.04);
+     box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
+}
+.content header{
+     color: black;
+     font-size: 30px;
+     font-weight: 600;
+     margin: 0 0 35px 0;
+     font-family: sans-serif;
+
+}
+.field{
+     height: 30px;
+     width: 100%;
+     display: flex;
+     background: rgba(255,255,255,0.94);
+}
+.field span{
+     color: #222;  
+     width: 30px;
+     line-height: 30px;
+}
+
+.field input{
+     height: 100%;
+     width: 100%;
+     background: transparent;
+     border: none;
+     outline: none;
+     color: #222;
+     font-size: 16px;
+     font-family: sans-serif;
+}
+.space{
+     margin-top: 10px;
+}
+input[type="submit"]{
+     background: #3498db;
+     border: 1px solid #2691d9;
+     color: white;
+     font-size: 18px;
+     letter-spacing: 1px;
+     font-weight: 600;
+     font-family: sans-serif;
+     cursor: pointer;
+}
+input[type="submit"]:hover{
+     background: #2691d9;
+}
+.alt{
+     color:white;
+     font-size: 15px;
+     font-family: sans-serif;
+}
+.alt a{
+     color: #3508daf5;
+     text-decoration: none; 
+     background-color:white;
+}
+.alt a:hover{
+     text-decoration: underline;
+}
+.show{
+     position: absolute;
+     right: 45px;
+     font-size: 12px;
+     font-weight: 700;
+     color: #222;
+     cursor: pointer;
+     display: none;
+     font-family: sans-serif;
+}
+.password:valid ~ .show{
+     display: block;
+}
+.shows{
+     position: absolute;
+     right: 45px;
+     font-size: 12px;
+     font-weight: 700;
+     color: #222;
+     cursor: pointer;
+     display: none;
+     font-family: sans-serif;
+}
+.password:valid ~ .shows{
+     display: block;
+}

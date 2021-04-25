@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title>
+               Finding Missing People
+          </title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<style>
+     body{
+          background-color: burlywood;
+     }
+section {
+     padding-top: 100px;
+     background-color: burlywood;
+     padding-left: 249px;
+}
+
+input [type=text]  {
+     width: 25%;
+     padding: 12px;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     resize: vertical;
+}
+
+textarea {
+     width: 92%;
+     padding: 12px;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     resize: vertical;
+}
+select {
+     width: 75%;
+     height: 23px;
+     padding: 1px;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     resize: vertical;
+}
+label {
+     padding: 12px 8px 12px 2px;
+     display: inline-block;
+}
+/* .container {
+     border-radius: 5px;
+     background-color: #1cdada;
+     padding: 20px;
+     margin-top: -100px;
+     position:absolute;
+}*/
+.container h1{
+     text-align: justify;
+     padding-left: 164px;
+     margin-bottom: -15px;
+} 
+
+.container {
+     margin: 1px;
+     padding-top: 0px;
+     margin-top: -57.5px;
+     min-height: 50px;
+
+}
+.col-25 {
+     float:left;
+     width: 12%;
+     margin-top: 0px;
+     margin: -4px;
+}
+.col-30 {
+     float:left;
+     width: 22%;
+     margin-top: 1px;
+}
+
+.col-35 {
+     float:left;
+     width: 22%;
+     margin-top: 10px;
+}
+.col-26 {
+     float:left;
+     width: 114.3%;
+     margin-top: -50px;
+     padding-left: 481px;
+}
+.col-36 {
+     float:left;
+     width: 100%;
+     margin-top: -54px;
+     padding-left: 614px;
+}
+.col-45 {
+     float:left;
+     width: 22%;
+     margin-top: 10px;
+}
+.col-40 {
+     float:left;
+     width: 22%;
+     margin-top: 0px;
+     padding-left: 90px;
+}
+.col-15 {
+     float: left;
+     width: 1%;
+     margin-top: 10px;
+     padding-left: -5px;
+}
+.col-55 {
+     float:left;
+     width: 1%;
+     margin-top: 10px;
+}
+.col-60 {
+     float:left;
+     width: 114.3%;
+     margin-top: -119px;
+     padding-left: 425px;
+}
+.col-70 {
+     float:left;
+     width: 0%;
+     margin-top: -105px;
+     padding-left: 615px;
+}
+.col-61 {
+     float:left;
+     width: 114.3%;
+     margin-top: -80px;
+     padding-left: 458px;
+}
+.col-71 {
+     float:left;
+     width: 0%;
+     margin-top: -69.5px;
+     padding-left: 615px;
+}
+
+.col-62 {
+     float:left;
+     width: 114.3%;
+     margin-top: -43px;
+     padding-left: 452px;
+}
+.col-72 {
+     float:left;
+     width: 0%;
+     margin-top: -44px;
+     padding-left: 615px;
+}
+.col-80 {
+     float:left;
+     width: 48.3%;
+     margin-top: 6px;
+     padding-left: 61px;
+}
+.col-90 {
+     float:left;
+     width: 1%;
+     margin-top: 20px;
+}
+.row {
+     margin-top: -1px;
+     margin: -3px;
+}
+
+
+
+/* .row:after {
+     content: "";
+     display: table;
+     clear: both;
+} */
+.registerbtn {
+     float:left;
+     width: 140%;
+     height: 30px;
+     padding: 1px;
+     border: 1px solid #ccc;
+     border-radius: 21px;
+     cursor: pointer;
+}
+.resetbtn {
+     width: 59%;
+     height: 33px;
+     padding: 1px;
+     border: 1px solid #ccc;
+     border-radius: 21px;
+     cursor: pointer;
+     margin-top: -1px;
+}
+.col-65 {
+     resize:vertical;
+
+     display: inline-block;
+     
+     margin-top: -52px;
+     padding-left: 260px;
+     padding-top: 16px;
+}
+.col-75 {
+     float:left;
+     width: 19.3%;
+     margin-top: -51px;
+     padding-left: 75px;
+     padding-top: 16px;
+}
+</style>
+
+     </head>
+
+<body>
+     <section>
+     <div class="container">
+                    <h1> <b><u>Edit Registered Details</u></b></h1> <br> 
+                    
+                    <form action="/update/" method="POST">
+                         <input type="hidden" name="id" value="{{records._id}}">
+                         <div class="row">
+                              <div class="col-25">
+                                   <label for="FullName"><b>Full Name:</b></label>
+                              </div>
+                              <div class="col-35">
+                                   <input type="text" required placeholder="First Name" value="{{records.firstname}}" name="firstname">
+                              </div>
+                              <div class="col-45">
+                                   <input type="text" required placeholder="Middle Name" value="{{records.middlename}}" name="middlename">                             
+                              </div>
+                              <div class="col-55">
+                                   <input type="text" required placeholder="Last Name" value="{{records.lastname}}" name="lastname">                              
+                              </div>
+                         </div>
+
+                         <div class="row">
+                              <div class="col-25">
+                                   <label for="Gender"><b>Gender:</b></label>
+                              </div>
+                              <div class="col-30">
+                                   <label class="radio inline">
+                                        <input type="radio" name="gender" value="Male" checked>
+                                        <span>Male</span>
+                                   </label>
+                                   <label class="radio inline">
+                                        <input type="radio" name="gender" value="Female" checked>
+                                        <span>Female</span>
+                                   </label>
+                              </div>
+                              <div class="col-40">
+                                   <label for="age"><b>Age:</b></label>
+                              </div>
+                              <div class="col-15">
+                                   <input type="text" required placeholder="In Years" value="{{records.age}}" name="age">                              
+                              </div>
+                         </div>
+
+                         <div class="row">
+                              <div class="col-25">
+                                   <label for="Height"><b>Height:</b></label>
+                              </div>
+                              <div class="col-35">
+                                   <input type="text" required placeholder="In Ft" value="{{records.height}}" name="height">
+                              </div>
+                              <div class="col-40">
+                                   <label for="Weight"><b>Weight:</b></label>                             
+                              </div>
+                              <div class="col-45">
+                                   <input type="text" required placeholder="lbs" value="{{records.weight}}" name="weight">                              
+                              </div>
+                         </div>
+
+                         <div class="row">
+                              <div class="col-25">
+                                   <label for="Address"><b>Address:</b></label>
+                              </div>
+                              <div class="col-35">
+                                   <input type="text" required placeholder="Street Name" value="{{records.street}}" name="street">
+                              </div>
+                              <div class="col-45">
+                                   <input type="text" required placeholder="City" value="{{records.city}}" name="city">
+                                                             
+                              </div>
+                         </div>
+
+                         <div class="row">
+                              <div class="col-25">
+                                   <label for="Address"></label>
+                              </div>
+                              <div class="col-35">
+                                   <input type="text" required placeholder="State" value="{{records.state}}" name="state">
+                              </div>
+                              <div class="col-45">
+                                   <input type="text" required placeholder="Country" value="{{records.country}}" name="country">
+                                                             
+                              </div>
+                              <div class="col-55">
+                                   <input type="text" required placeholder="Zip Code" value="{{records.zipcode}}" name="zipcode">                              
+                              </div>
+                         </div>
+
+                         <div class="row">
+                              <div class="col-25">
+                                   <label for="Description"><b>Description:</b></label>
+                              </div>
+                              <div class="col-35">
+                                   <textarea type="text" required placeholder="Other details" value="{{records.description}}" name="description" rows="5" cols="50">
+                                   </textarea>
+                              </div>
+                              <div class="col-40">
+                                   <label for="LastSeen"><b>Last Seen:</b></label>
+                              </div>
+                              <div class="col-55">
+                                   <input type="text" required placeholder="Name of place" value="{{records.lastseen}}" name="lastseen">
+                              </div>                      
+                         </div>
+
+                              <div class="col-60">
+                                   <label for="Image"><b>Upload Image:</b></label>
+                              </div>
+                              <div class="col-70">
+                                   <input type="file" value="{{records.image}}" name="image">
+                              </div>
+
+                              <div class="col-61">
+                                   <label for="Eyecolor"><b>Eye Color:</b></label>
+                              </div>
+                              <div class="col-71">
+                                   <input type="text" required placeholder="Color of eye" value="{{records.eyecolor}}" name="eyecolor">
+                              </div> 
+                              <div class="col-62">
+                                   <label for="Haircolor"><b>Hair Color:</b></label>
+                              </div>
+                              <div class="col-72">
+                                   <input type="text" required placeholder="Color of hair" value="{{records.haircolor}}" name="haircolor">
+                              </div> 
+                              
+                         
+                              {{!-- <div class="col-60">
+                                   <label for="Image"><b>Upload Image:</b></label>
+                              </div>
+                              <div class="col-70">
+                                   <input type="file" value="{{records.image}}" name="image">
+                              </div> --}}
+                         
+                         
+
+                         <div class="row">
+                              <div class="col-20">
+                                   <label for="Reported By"><b><u>Reported By:</u></b></label>
+                              </div>
+                         </div>
+
+                         <div class="row">
+                              <div class="col-25">
+                                   <label for="FullName"><b>Full Name:</b></label>
+                              </div>
+                              <div class="col-35">
+                                   <input type="text" required placeholder="Full Name" value="{{records.reportername}}" name="reportername">
+                              </div>
+                              <div class="col-26">
+                                   <label for="Status"><b>Status:</b></label>
+                              </div>
+
+                              <div class="col-36">
+                                   <label class="radio inline">
+                                        <input type="radio" name="status" value="Found" checked>
+                                        <span>Found</span>
+                                   </label>
+                                   <label class="radio inline">
+                                        <input type="radio" name="status" value="Lost" checked>
+                                        <span>Lost</span>
+                                   </label>
+                              </div>
+                         </div>
+
+                         <div class="row">
+                              <div class="col-25">
+                                   <label for="Email"><b>Email:</b></label>
+                              </div>
+                              <div class="col-35">
+                                   <input type="text" required placeholder="abc@example.com" value="{{records.email}}" name="email">
+                              </div>
+                              <div class="col-40">
+                                   <label for="Phone"><b>Phone No:</b></label>
+                              </div>
+                              <div class="col-55">
+                                   <input type="tel" required placeholder="0123456749" value="{{records.phone}}" name="phone">
+                              </div>
+                         </div>
+                         
+                         
+                         <br><br>
+
+                         <div class="row">
+                              <div class="col-65">
+                              <button type="submit" class="registerbtn" value="Submit"><strong>Submit</strong></button>
+                              </div>
+                              <div class="col-75">
+                              <button type="reset" class="resetbtn" value="Reset"><strong>Reset</strong></button>
+                              </div>
+                         </div>
+
+                    </form>
+                    <br>
+               </div>
+          
+     </section> 
+
+</body>
+</html>

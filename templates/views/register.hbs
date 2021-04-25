@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <title>Finding Missing People</title>
+          {{>header}}
+     </head>
+
+<body background="images/missing.jpg">
+     {{>navbar}}
+     
+     <div class="bg-img">
+
+     <div class="content">
+          <header> Register form </header>
+          <form action="/register" method="post">
+               <div class="field">
+                    <span class="fa fa-user"></span>
+                    <input type="text" id="fullname" required placeholder="Full Name" value="" name="fullname">
+               </div>
+
+               <div class="field space">
+                    <span class="fa fa-envelope"></span>
+                    <input type="text" required placeholder="Email" value="" name="email">
+               </div>
+
+               <div class="field space">
+                    <span class="fa fa-phone-square"></span>
+                    <input type="text" minlength="10" maxlength="10" required placeholder="Phone Number" value="" name="phone">
+               </div>
+
+               <div class="field space">
+                    <span class="fa fa-lock"></span>
+                    <input type="password" class="password" required placeholder="password" value="" name="password">
+                    <span class="shows">SHOW</span>
+               </div>
+
+               <div class="field space">
+                    <span class="fa fa-lock"></span>
+                    <input type="password" class="password" required placeholder="re-enter password" value="" name="confirmpassword">
+                    <span class="shows">SHOW</span>
+               </div>
+
+               <div class="field space">
+                    <input type="submit" class="btnRegister" value="Sign Up">
+               </div>
+
+               <div class="alt">
+                <h5>If you already have account: <a href="/login"> login here </a> </h5>
+                </div>
+          </form>
+     </div>
+</div>
+
+
+</body>
+
+</html>

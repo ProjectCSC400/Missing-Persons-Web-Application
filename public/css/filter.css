@@ -1,0 +1,17 @@
+
+
+.col-md-3 {
+     float: left;
+     width: 75%;
+     margin-top: 1px;
+}
+header{
+     background-color: rgba(136, 16, 248, 0.867);
+}
+section {
+     margin: 0px;
+     padding-top: 61px;
+}
+h2 {
+     padding-left: 28px;
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title>Finding Missing People</title>
+          <link rel = "stylesheet" href="css/landing.css">
+
+          {{>header}}
+
+     </head>
+
+<body>
+     <header>
+     {{>navbar1}}
+     </header>
+<section>
+     <div class="container">
+                    <h1> <b><u>Register Case</u></b></h1> <br> 
+                    
+                    <form action="/landing" method="POST" role="form" enctype="multipart/form-data">
+                         <input type="hidden" name="_id" value="{{registercase._id}}">
+                         <div class="row">
+                              <div class="col-25">
+                                   <label for="FullName"><b>Full Name:</b></label>
+                              </div>
+                              <div class="col-35">
+                                   <input type="text" required placeholder="First Name" value="{{registercase.firstname}}" name="firstname">
+                              </div>
+                              <div class="col-45">
+                                   <input type="text" placeholder="Middle Name" value="{{registercase.middlename}}" name="middlename">                             
+                              </div>
+                              <div class="col-55">
+                                   <input type="text" required placeholder="Last Name" value="{{registercase.lastname}}" name="lastname">                              
+                              </div>
+                         </div>
+
+                         <div class="row">
+                              <div class="col-25">
+                                   <label for="Gender"><b>Gender:</b></label>
+                              </div>
+                              <div class="col-30">
+                                   <label class="radio inline">
+                                        <input type="radio" name="gender" value="Male" checked>
+                                        <span>Male</span>
+                                   </label>
+                                   <label class="radio inline">
+                                        <input type="radio" name="gender" value="Female" checked>
+                                        <span>Female</span>
+                                   </label>
+                              </div>
+                              <div class="col-40">
+                                   <label for="age"><b>Age:</b></label>
+                              </div>
+                              <div class="col-55">
+                                   <input type="text" required placeholder="Enter in Year" value="{{registercase.age}}" name="age">                              
+                              </div>
+                         </div>
+
+                         <div class="row">
+                              <div class="col-25">
+                                   <label for="Height"><b>Height:</b></label>
+                              </div>
+                              <div class="col-35">
+                                   <input type="text" required placeholder="Enter in Ft" value="{{registercase.height}}" name="height">
+                              </div>
+                              <div class="col-40">
+                                   <label for="Weight"><b>Weight:</b></label>                             
+                              </div>
+                              <div class="col-45">
+                                   <input type="text" required placeholder="Enter in lbs" value="{{registercase.weight}}" name="weight">                              
+                              </div>
+                         </div>
+
+                         <div class="row">
+                              <div class="col-25">
+                                   <label for="Address"><b>Address:</b></label>
+                              </div>
+                              <div class="col-35">
+                                   <input type="text" required placeholder="Street Name" value="{{registercase.street}}" name="street">
+                              </div>
+                              <div class="col-45">
+                                   <input type="text" required placeholder="City" value="{{registercase.city}}" name="city">
+                                                             
+                              </div>
+                         </div>
+
+                         <div class="row">
+                              <div class="col-25">
+                                   <label for="Address"></label>
+                              </div>
+                              <div class="col-35">
+                                   <input type="text" required placeholder="State" value="{{registercase.state}}" name="state">
+                              </div>
+                              <div class="col-45">
+                                   <input type="text" required placeholder="Country" value="{{registercase.country}}" name="country">
+                                                             
+                              </div>
+                              <div class="col-55">
+                                   <input type="text" required placeholder="Zip Code" value="{{registercase.zipcode}}" name="zipcode">                              
+                              </div>
+                         </div>
+
+                         <div class="row">
+                              <div class="col-25">
+                                   <label for="Description"><b>Description:</b></label>
+                              </div>
+                              <div class="col-35">
+                                   <textarea type="text" required placeholder="Other details" value="{{registercase.description}}" name="description" rows="5" cols="50">
+                                   </textarea>
+                              </div>
+                              <div class="col-40">
+                                   <label for="LastSeen"><b>Last Seen:</b></label>
+                              </div>
+                              <div class="col-55">
+                                   <input type="text" required placeholder="Name of place" value="{{registercase.lastseen}}" name="lastseen">
+                              </div>                      
+                         </div>
+                              
+                         
+                              <div class="col-60">
+                                   <label for="Image"><b>Upload Image:</b></label>
+                              </div>
+                              <div class="col-70">
+                                   <input type="file" value="{{registercase.image}}" name="file">
+                              </div>
+
+                              <div class="col-61">
+                                   <label for="Eyecolor"><b>Eye Color:</b></label>
+                              </div>
+                              <div class="col-71">
+                                   <input type="text" required placeholder="Color of eye" value="{{registercase.eyecolor}}" name="eyecolor">
+                              </div> 
+                              <div class="col-62">
+                                   <label for="Haircolor"><b>Hair Color:</b></label>
+                              </div>
+                              <div class="col-72">
+                                   <input type="text" required placeholder="Color of hair" value="{{registercase.haircolor}}" name="haircolor">
+                              </div> 
+                         
+                         
+
+                         <div class="row">
+                              <div class="col-25">
+                                   <label for="Reported By"><b><u>Reported By:</u></b></label>
+                              </div>
+                         </div>
+
+                         <div class="row">
+                              <div class="col-25">
+                                   <label for="FullName"><b>Full Name:</b></label>
+                              </div>
+                              <div class="col-35">
+                                   <input type="text" required placeholder="Full Name" value="{{registercase.reportername}}" name="reportername">
+                              </div>
+
+                              <div class="col-26">
+                                   <label for="Status"><b>Status:</b></label>
+                              </div>
+
+                              <div class="col-36">
+                                   <label class="radio inline">
+                                        <input type="radio" name="status" value="Found" checked>
+                                        <span>Found</span>
+                                   </label>
+                                   <label class="radio inline">
+                                        <input type="radio" name="status" value="Lost" checked>
+                                        <span>Lost</span>
+                                   </label>
+                              </div>
+                         </div>
+
+                         <div class="row">
+                              <div class="col-25">
+                                   <label for="Email"><b>Email:</b></label>
+                              </div>
+                              <div class="col-35">
+                                   <input type="text" required placeholder="abc@example.com" value="{{registercase.email}}" name="email">
+                              </div>
+                              <div class="col-40">
+                                   <label for="Phone"><b>Phone No:</b></label>
+                              </div>
+                              <div class="col-55">
+                                   <input type="tel" required placeholder="0123456749" value="{{registercase.phone}}" name="phone">
+                              </div>
+                         </div>
+                         <br><br>
+                         
+                         
+
+                         <div class="row">
+                              <div class="col-65">
+                              <button type="submit" class="registerbtn" value="Submit"><strong>Submit</strong></button>
+                              </div>
+                              <div class="col-75">
+                              <button type="reset" class="resetbtn" value="Reset"><strong>Reset</strong></button>
+                              </div>
+                         </div>
+
+                    </form>
+                    <br>
+               </div>
+          
+     </section> 
+
+
+</body>
+
+</html>
